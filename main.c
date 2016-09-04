@@ -1,6 +1,4 @@
 #include <util/delay.h>
-
-#include "uart.h"
 #include "ym2149.h"
 
 // Notes
