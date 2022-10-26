@@ -8,7 +8,7 @@ Requirements
 
 The following libraries are required:
 
-* avr-gcc
+* gcc-avr (or avr-gcc depending on the distribution)
 * avr-libc
 * avrdude
 
@@ -17,6 +17,20 @@ How to test the circuit
 
     $ make
     $ make flash
+	
+Common errors
+-------------
+
+If getting the following error message when trying to flash the chip (`make flash`):
+
+```
+avrdude: stk500_getsync() attempt 1 of 10: not in sync: resp=0xff
+avrdude: stk500_recv(): programmer is not responding
+```
+
+Try to change the baudrate to 57600 in the Makefile (1st line).  Some
+models may accept faster transfer rates than others.
+
 
 More information
 ----------------
